@@ -4,6 +4,7 @@ import { computed, defineComponent, h } from 'vue'
 import { useRoute } from 'vue-router'
 
 import { useEnvStore } from '@/stores/debug'
+import bus from '@/utils/mitt'
 
 const linkItems = [
   // {
@@ -61,6 +62,10 @@ const Icon = defineComponent({
     }
   }
 })
+
+function downloadPDF() {
+  bus.emit('downloadPDF')
+}
 </script>
 
 <template>
@@ -103,7 +108,7 @@ const Icon = defineComponent({
         <Bug />
         开发模式:({{ envStore.debug ? '开' : '关' }})
       </div>
-      <div class="common-btn">
+      <div class="common-btn" @click="downloadPDF">
         <Share />
         发布
       </div>

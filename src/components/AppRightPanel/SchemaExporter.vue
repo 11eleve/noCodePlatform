@@ -4,7 +4,7 @@
       <span>导出 JSON</span>
       <copy class="icon" @click="handleCopyText" />
     </div>
-    //展示json的组件,能够自动格式化
+    <!--       -->
     <vue-json-pretty
       class="json-pretty"
       showIcon

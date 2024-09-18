@@ -5,7 +5,7 @@ import { blocksBaseMetaList, getBlocksDefaultData } from '@/constants/blocksBase
 </script>
 
 <template>
-  //使所有组件可拖动
+  <!-- //使所有组件可拖动 -->
   <div class="blocks-drawer-wrapper">
     <h3 class="drawer-title">组件</h3>
 

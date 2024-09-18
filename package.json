@@ -38,6 +38,8 @@
     "copy-text-to-clipboard": "3.2.0",
     "d3": "7.8.5",
     "echarts": "5.4.3",
+    "html2pdf.js": "^0.10.2",
+    "mitt": "^3.0.1",
     "nanoid": "5.0.4",
     "pinia": "2.1.4",
     "react": "18.2.0",
