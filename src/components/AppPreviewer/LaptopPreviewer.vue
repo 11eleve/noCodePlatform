@@ -6,21 +6,13 @@ import html2pdf from 'html2pdf.js'
 function download() {
   // 获取指定的HTML元素
   const element = document.getElementById("layout-wrapper");
-  if (!element) {
-    console.error("Element not found");
-    return;
-  }
-  // 使用 html2pdf 生成 PDF
-  const opt = {
-    useCORS: true,
-    margin: 0.5,         // PDF的页边距
-    filename: 'document.pdf',  // 保存的文件名
-    image: { type: 'jpeg', quality: 2 },  // 图片类型和质量
-    html2canvas: { scale: 2 },  // html2canvas 选项，缩放比例
-    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }  // jsPDF 选项，页面格式为 A4 纵向
-  };
-  // 使用 html2pdf 将 HTML 元素转换为 PDF
-  html2pdf().set(opt).from(element).save();
+  // console.log('this is dom')
+  // console.log(element?.outerHTML)
+  const blob = new Blob([element?.outerHTML || ''], { type: 'text/html' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'page.html';
+  link.click();
 }
 
 bus.on('downloadPDF', () => {
