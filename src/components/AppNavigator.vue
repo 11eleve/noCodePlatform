@@ -7,13 +7,13 @@ import { useEnvStore } from '@/stores/debug'
 import bus from '@/utils/mitt'
 
 const linkItems = [
-  // {
-  //   value: 'dataSource',
-  //   label: '数据源',
-  //   bg: `radial-gradient(50% 50% at 50% 100%, rgba(0, 196, 83, 0.2) 0%, rgba(0, 196, 83, 0) 100%)`,
-  //   color: 'rgb(0, 196, 83)',
-  //   borderColor: 'radial-gradient(50% 50%, rgb(0, 196, 83) 0%, rgba(0, 196, 83, 0) 100%)'
-  // },
+  {
+    value: 'dataSource',
+    label: '数据源',
+    bg: `radial-gradient(50% 50% at 50% 100%, rgba(0, 196, 83, 0.2) 0%, rgba(0, 196, 83, 0) 100%)`,
+    color: 'rgb(0, 196, 83)',
+    borderColor: 'radial-gradient(50% 50%, rgb(0, 196, 83) 0%, rgba(0, 196, 83, 0) 100%)'
+  },
   {
     value: 'layout',
     label: '布局',

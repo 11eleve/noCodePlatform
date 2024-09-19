@@ -44,6 +44,9 @@ importers:
       html2pdf.js:
         specifier: ^0.10.2
         version: 0.10.2
+      jspdf:
+        specifier: ^2.5.2
+        version: 2.5.2
       mitt:
         specifier: ^3.0.1
         version: 3.0.1

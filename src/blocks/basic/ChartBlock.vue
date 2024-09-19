@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div class="chart">
-    <ChartRenderer :block-info="blockInfo" />
+    <ChartRenderer id="chart" :block-info="blockInfo" />
   </div>
 </template>
 
